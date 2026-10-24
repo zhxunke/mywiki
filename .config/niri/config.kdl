@@ -1,0 +1,24 @@
+include "./cfg/animation.kdl"
+include "./cfg/autostart.kdl"
+include "./cfg/keybinds.kdl"
+include "./cfg/input.kdl"
+include "./cfg/display.kdl"
+include "./cfg/layout.kdl"
+include "./cfg/rules.kdl"
+include "./cfg/misc.kdl"
+
+
+//最大化相当于win+F
+window-rule {
+    match app-id="^firefox$"
+    match app-id="^splayer$"
+    match app-id="^Typora$"
+    open-maximized true
+}
+
+// 打开时默认全屏的程序相当于F11
+window-rule {
+    match app-id="^steam$"
+    match app-id="^com\\.microsoft\\.VSCode$"
+    open-fullscreen true
+}
