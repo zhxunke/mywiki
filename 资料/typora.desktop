@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Typora
+GenericName=Markdown Editor
+Exec=env XMODIFIERS=@im=fcitx GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx /usr/bin/typora %U
+Icon=typora
+Type=Application
+StartupNotify=true
+Categories=Office;WordProcessor;
+MimeType=text/markdown;text/x-markdown;
