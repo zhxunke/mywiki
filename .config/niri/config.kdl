@@ -14,6 +14,7 @@ window-rule {
     match app-id="^splayer$"
     match app-id="^Typora$"
     match app-id="^kitty$"
+    match app-id="^io.missioncenter.MissionCenter$"
     open-maximized true
 }
 
