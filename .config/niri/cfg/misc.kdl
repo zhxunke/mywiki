@@ -17,12 +17,13 @@
         xcursor-size 36
     }
 
-    blur {
-        passes 2        // more passes = stronger blur (default: 3)
-        offset 3.0      // sample distance per pass (default: 3.0)
-        noise 0.03      // grain overlay (default: 0.02)
-        saturation 1.0  // color saturation boost (default: 1.5)
-    }
+    // blur{} 已移至 ~/.config/niri/blur.kdl 统一管理，避免重复定义导致配置报错
+    // blur {
+    //     passes 2        // more passes = stronger blur (default: 3)
+    //     offset 3.0      // sample distance per pass (default: 3.0)
+    //     noise 0.03      // grain overlay (default: 0.02)
+    //     saturation 1.0  // color saturation boost (default: 1.5)
+    // }
 
     debug {
         // Allows notification actions and window activation from Noctalia.

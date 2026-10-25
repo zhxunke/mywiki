@@ -1,0 +1,46 @@
+// --- NIRI GLASS START ---
+// 玻璃风格：不做模糊，窗口背后是清晰的壁纸，由终端自身的半透明体现"玻璃"。
+//
+// 说明：blur{} 顶层块仍然保留（niri 的 blur 参数与是否启用是两件事），
+// 但所有窗口规则都改为 blur false，因此不会有任何模糊被渲染。
+// 若将来想恢复模糊，把下面对应的 blur false 改回 blur true 即可。
+blur {
+    passes 3          // 当前未启用（所有规则 blur false），保留作为备用参数
+    offset 3
+    noise 0.02
+    saturation 1.5
+}
+
+// 全局窗口规则：普通窗口不做背景模糊
+window-rule {
+    background-effect {
+        xray true
+        blur false
+    }
+}
+
+// 浮动窗口同样不做背景模糊（快速终端、剪贴板弹窗等属于这类）
+window-rule {
+    match is-floating=true
+    background-effect {
+        xray true
+        blur false
+    }
+}
+
+// fuzzel / 启动器 layer 规则：同样关闭模糊
+layer-rule {
+    match namespace="^launcher$"
+    geometry-corner-radius 8
+    background-effect {
+        xray false
+        blur false
+    }
+}
+
+// 终端单独处理：避免边框背景盖在透明窗口上
+window-rule {
+    match app-id="^kitty$"
+    draw-border-with-background false
+}
+// --- NIRI GLASS END ---

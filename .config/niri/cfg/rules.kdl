@@ -1,14 +1,9 @@
     window-rule {
-        geometry-corner-radius 20 // Set every window radius to 20
+        geometry-corner-radius 20 // 圆角大会让焦点环过渡更柔和（仓库值为 8）
         clip-to-geometry true
     }
 
-    window-rule {
-        background-effect {
-          blur true
-          xray false
-        }
-    }
+    // 全局 background-effect 规则已统一移至 ~/.config/niri/blur.kdl
 
     // Floating Noctalia settings window.
     window-rule {
