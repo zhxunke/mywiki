@@ -54,5 +54,3 @@ nvim
 第一次启动会自动用 lazy.nvim 下载并安装所有插件,等它跑完后重启一次 nvim。然后运行 `:LazyHealth` 检查有没有缺失的依赖。
 
 打开时出现问题
-
-[neovim问题解决](../neovim-open-with-修复记录.md)
