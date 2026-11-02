@@ -23,5 +23,6 @@ window-rule {
 window-rule {
     match app-id="^steam$"
     match app-id="^com\\.microsoft\\.VSCode$"
+    match app-id="^md.obsidian.Obsidian$"
     open-fullscreen true
 }
