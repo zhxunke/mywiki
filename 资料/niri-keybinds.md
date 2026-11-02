@@ -10,19 +10,19 @@
 
 ## 改动表
 
-| 作用 | 原配置 | 改动后的配置 |
-|---|---|---|
-| 13打开终端(a1) | 按你原来的绑定（如 `Mod+Return`），或无 | `Mod+T { spawn "alacritty"; }` |
-| 浮动/平铺窗口切换(a2) | `Mod+T { toggle-window-floating; }` | `Mod+Shift+T { toggle-window-floating; }` |
-| 滚轮切换工作区(b1) | `Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }`<br>`Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }` | `Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }`<br>`Mod+Shift+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }` |
-| 滚轮左右切换列(b2) | `Mod+Shift+WheelScrollDown { focus-column-right; }`<br>`Mod+Shift+WheelScrollUp { focus-column-left; }` | `Mod+WheelScrollDown { focus-column-right; }`<br>`Mod+WheelScrollUp { focus-column-left; }` |
-| 应用启动器（noctalia） | 无（niri 默认是 `Mod+D` 打开 fuzzel，以实际为准） | `Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }`<br>`Mod+Ctrl+Return { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }` |
-| 会话菜单（noctalia） | 无（niri 默认 `Mod+Shift+E` 是退出，以实际为准） | `Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }`<br>`Mod+Shift+Q { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }` |
-| 截图（选区）(c1) | Ctrl+Shift+1 | `Mod+Shift+S { screenshot; }` |
-| 总览 | `Mod+O { toggle-overview; }` | `Mod+G { toggle-overview; }` |
-| 中键关闭窗口 | 无（`Mod+Q { close-window; }` 保留） | 在 `Mod+Q` 下面新增一行：<br>`Mod+MouseMiddle { close-window; }` |
-| 21应用启动器 | Mod+Ctrl+Return       (rentun就是enter) | Mod+Z { spawn-sh "noctalia msg panel-toggle launcher"; } |
-| 24会话菜单 | Mod+Shift+Q | Mod+X { spawn-sh "noctalia msg panel-toggle session"; } |
+| 作用              | 原配置                                                                                                                            | 改动后的配置                                                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 13打开终端(a1)      | 按你原来的绑定（如 `Mod+Return`），或无                                                                                                     | `Mod+T { spawn "alacritty"; }`                                                                                                                             |
+| 浮动/平铺窗口切换(a2)   | `Mod+T { toggle-window-floating; }`                                                                                            | `Mod+Shift+T { toggle-window-floating; }`                                                                                                                  |
+| 滚轮切换工作区(b1)     | `Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }`<br>`Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }` | `Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }`<br>`Mod+Shift+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }`                 |
+| 滚轮左右切换列(b2)     | `Mod+Shift+WheelScrollDown { focus-column-right; }`<br>`Mod+Shift+WheelScrollUp { focus-column-left; }`                        | `Mod+WheelScrollDown { focus-column-right; }`<br>`Mod+WheelScrollUp { focus-column-left; }`                                                                |
+| 应用启动器（noctalia） | 无（niri 默认是 `Mod+D` 打开 fuzzel，以实际为准）                                                                                            | `Mod+Z { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }`<br>`Mod+Ctrl+Return { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }`   |
+| 会话菜单（noctalia）  | 无（niri 默认 `Mod+Shift+E` 是退出，以实际为准）                                                                                             | `Mod+X { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }`<br>`Mod+Shift+Q { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }` |
+| 截图（选区）(c1)      | Ctrl+Shift+1                                                                                                                   | `Mod+Shift+S { screenshot; }`                                                                                                                              |
+| 总览              | `Mod+O { toggle-overview; }`                                                                                                   | `Mod+G { toggle-overview; }`                                                                                                                               |
+| 中键关闭窗口          | 无（`Mod+Q { close-window; }` 保留）                                                                                                | 在 `Mod+Q` 下面新增一行：<br>`Mod+MouseMiddle { close-window; }`                                                                                                   |
+| 21应用启动器         | Mod+Ctrl+Return       (rentun就是enter)                                                                                          | Mod+Z { spawn-sh "noctalia msg panel-toggle launcher"; }                                                                                                   |
+| 24会话菜单          | Mod+Shift+Q                                                                                                                    | Mod+X { spawn-sh "noctalia msg panel-toggle session"; }                                                                                                    |
 
 ## 可选：用 Ctrl+Shift+数字截图
 
@@ -73,5 +73,3 @@ environment {
     XMODIFIERS "@im=fcitx"
 }
 ```
-
-见03水杉输入法-fcitx5默认中文配置记录.md
