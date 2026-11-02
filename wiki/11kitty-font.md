@@ -11,7 +11,6 @@
 | `~/.config/kitty/kitty.conf` | 6–7 | `font_family JetBrains Maple Mono ` / `font_size 13.5` |
 | `~/.config/kitty/themes/kitty.conf` | 4–5 | 同上（这是主题备份/模板，实际生效的是 `kitty.conf`） |
 
-> 注意：`font_family` 后面多了一个空格，建议删掉，保持 `font_family JetBrains Maple Mono`。
 
 ## 2. 系统当前状态
 
@@ -88,8 +87,6 @@ sudo mkdir -p /usr/local/share/fonts/JetBrainsMapleMono
 sudo cp ~/Downloads/JetBrainsMapleMono/*.ttf /usr/local/share/fonts/JetBrainsMapleMono/
 sudo fc-cache -fv
 ```
-
-其他等效位置：`/usr/share/fonts/`（包管理器用）、`/usr/local/share/fonts/`（手动装，推荐）。
 
 ### 验证
 
